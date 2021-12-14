@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Starting OLS..."
-/home/container/lsws/bin/lswsctrl start
+/mnt/server/lsws/bin/litespeed -d
