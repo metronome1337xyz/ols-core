@@ -600,15 +600,15 @@ cat > ./ols.conf <<END
 #
 
 SERVERROOT=/mnt/server/lsws
-OPENLSWS_USER=container
-OPENLSWS_GROUP=container
+OPENLSWS_USER=nobody
+OPENLSWS_GROUP=nobody
 OPENLSWS_ADMIN=admin
 OPENLSWS_EMAIL=root@localhost
 OPENLSWS_ADMINSSL=yes
 OPENLSWS_ADMINPORT=7080
 USE_LSPHP7=no
-DEFAULT_TMP_DIR=/mnt/server/tmp/lshttpd
-PID_FILE=/mnt/server/tmp/lshttpd/lshttpd.pid
+DEFAULT_TMP_DIR=/home/container/tmp/lshttpd
+PID_FILE=/home/container/tmp/lshttpd/lshttpd.pid
 OPENLSWS_EXAMPLEPORT=8088
 
 #You can set password here
@@ -624,16 +624,16 @@ cat > ./install.sh <<END
 #!/bin/sh
 
 SERVERROOT=/mnt/server/lsws
-OPENLSWS_USER=container
-OPENLSWS_GROUP=container
+OPENLSWS_USER=nobody
+OPENLSWS_GROUP=nobody
 OPENLSWS_ADMIN=admin
 OPENLSWS_PASSWORD=changemee
 OPENLSWS_EMAIL=root@localhost
 OPENLSWS_ADMINSSL=yes
 OPENLSWS_ADMINPORT=7080
 USE_LSPHP7=no
-DEFAULT_TMP_DIR=/mnt/server/tmp/lshttpd
-PID_FILE=/mnt/server/tmp/lshttpd/lshttpd.pid
+DEFAULT_TMP_DIR=/home/container/tmp/lshttpd
+PID_FILE=/home/container/tmp/lshttpd/lshttpd.pid
 OPENLSWS_EXAMPLEPORT=8088
 CONFFILE=./ols.conf
     
