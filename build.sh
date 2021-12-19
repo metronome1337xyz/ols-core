@@ -599,7 +599,7 @@ cat > ./ols.conf <<END
 #If you want to change the default values, please update this file.
 #
 
-SERVERROOT=/mnt/server/lsws
+SERVERROOT=/home/container/lsws
 OPENLSWS_USER=nobody
 OPENLSWS_GROUP=nobody
 OPENLSWS_ADMIN=admin
@@ -612,7 +612,7 @@ PID_FILE=/home/container/tmp/lshttpd/lshttpd.pid
 OPENLSWS_EXAMPLEPORT=8088
 
 #You can set password here
-OPENLSWS_PASSWORD=changemee
+#OPENLSWS_PASSWORD=changemee
 
 END
 
@@ -623,11 +623,11 @@ mv dist/install.sh  dist/_in.sh
 cat > ./install.sh <<END 
 #!/bin/sh
 
-SERVERROOT=/mnt/server/lsws
+SERVERROOT=/home/container/lsws
 OPENLSWS_USER=nobody
 OPENLSWS_GROUP=nobody
 OPENLSWS_ADMIN=admin
-OPENLSWS_PASSWORD=changemee
+OPENLSWS_PASSWORD=
 OPENLSWS_EMAIL=root@localhost
 OPENLSWS_ADMINSSL=yes
 OPENLSWS_ADMINPORT=7080
